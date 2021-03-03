@@ -5,6 +5,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,10 +24,14 @@ const Header: React.FC = () => {
       <AppBar position="static" color="transparent">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            SHIORI
+            <Link to="/">SHIORI</Link>
           </Typography>
-          <Button color="inherit">LOGIN</Button>
-          <Button color="inherit">SIGNIN</Button>
+          <Link to="/login">
+            <Button color="inherit">LOGIN</Button>
+          </Link>
+          <Link to="/register">
+            <Button color="inherit">SIGNUP</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
